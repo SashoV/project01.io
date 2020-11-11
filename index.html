@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Brainster Labs | Home</title>
+    <link rel="shortcut icon" type="image/png" href="myfavicon.png"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e0b18861b4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <navbar id="navbar">
+        <a href="index.html"><img src="images/brainster_logo.png" alt="logo" class="logo"></a>
+        <ul>
+            <li><a href="https://www.brainster.io/marketpreneurs">Академија за маркетинг</a></li>
+            <li><a href="http://codepreneurs.co/">Академија за програмирање</a></li>
+            <li><a href="https://datascience.brainster.co/">Академија за data science</a></li>
+            <li><a href="https://www.brainster.io/design">Академија за дизајн</a></li>
+        </ul>
+        <a class="employ red-btn" href="form.html">Вработи наш студент</a>
+        <div class="hamb_icon_1" onclick="openNavBig()">
+            <div class="top_line"></div>
+            <div class="middle_line"></div>
+            <div class="bottom_line"></div>
+        </div>
+        <div class="hamb_icon_2" onclick="openNavSmall()">
+            <div class="top_line"></div>
+            <div class="middle_line"></div>
+            <div class="bottom_line"></div>
+        </div>
+    </navbar>
+
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="https://www.brainster.io/marketpreneurs">Академија за маркетинг</a>
+            <a href="http://codepreneurs.co/">Академија за програмирање</a>
+            <a href="https://datascience.brainster.co/">Академија за data science</a>
+            <a href="https://www.brainster.io/design">Академија за дизајн</a>
+            <a class="employ red-btn overEmploy" id="font-13" href="form.html">Вработи наш студент</a>
+        </div>
+    </div>
+
+
+    <header id="header">
+        <h1>Brainster Labs</h1>
+    </header>
+
+    <div class="container-fluid filter-nav">
+
+        <ul class="projects-nav col-md-12">
+            <li class="col-md-4 col-sm-12" onclick="setActive('marketing', this)">Проекти на студенти од академијата за
+                маркетинг<i class="fa fa-check-circle"></i></li>
+            <li class="col-md-4 col-sm-12" onclick="setActive('development', this)">Проекти на студенти од академијата
+                за програмирање<i class="fa fa-check-circle"></i></li class="col-sm-12">
+            <li class="col-md-4 col-sm-12" onclick="setActive('design', this)">Проекти на студенти од академијата за
+                дизајн<i class="fa fa-check-circle"></i></li>
+        </ul>
+
+
+    </div>
+
+    <div class="container">
+        <h1>Проекти</h1>
+
+        <div class="cards-container">
+
+        </div>
+
+        <div class="load-more-container">
+            <div id="loadMore" onclick="renderCards()" class="load-more btn red-btn">Прикажи повеќе</div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>Изработено со <img src="images/red-heart.png" alt="red heart" width="15px"> од студентите на
+            Brainster</p>
+    </footer>
+
+    <script>
+        /* Open when someone clicks on the span element */
+        function openNavBig() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function openNavSmall() {
+            document.getElementById("myNav").style.width = "50%";
+        }
+
+        /* Close when someone clicks on the "x" symbol inside the overlay */
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+
+
+
+    <!-- <script src="main.js"></script> -->
+    <script src="main.js"></script>
+
+</body>
+
+<html>

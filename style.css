@@ -1,0 +1,483 @@
+body {
+    margin: 0;
+    font-family: Ubuntu, Arial, Helvetica, sans-serif;
+    background-color: #fbd754;
+    min-height: 100vh;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+#navbar {
+    background-color: #fbd754;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.1);
+}
+
+#navbar ul {
+    margin-bottom: 0;
+}
+
+#navbar li {
+    display: inline-block;
+    list-style: none;
+}
+
+#navbar li a {
+    color: black;
+    font-weight: bold;
+    font-size: 13px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+#navbar li a:hover {
+    color: gray;
+    text-decoration: none;
+}
+
+.logo {
+    margin: 5px 0px 5px 20px;
+    width: 45px;
+}
+
+.red-btn {
+    background-color: #ff0028;
+    color: white;
+    border: 1px solid #ff0028;
+}
+
+.employ {
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.red-btn:hover, #form-btn:hover {
+    border-color: #d43f3a;
+    background-color: #d9534f;
+    color: white;
+    text-decoration: none;
+}
+
+#font-13 {
+    font-size: 13px;
+}
+
+.hamb_icon_1, .hamb_icon_2 {
+    margin-right: 10px;
+}
+
+.hamb_icon_1:hover, .hamb_icon_2:hover {
+    cursor: pointer;
+}
+
+.top_line {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 5px;
+}
+
+.middle_line {
+    width: 25px;
+    height: 5px;
+    background-color: black;
+    margin-left: 15px;
+    margin-bottom: 6px;
+}
+
+.bottom_line {
+    width: 15px;
+    height: 5px;
+    background-color: black;
+    margin-left: 25px;
+    margin-bottom: 6px;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #34313a;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: left;
+    margin-top: 25px;
+    margin-left: 15px;
+}
+
+.overlay a {
+    padding: 8px;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    margin-bottom: 25px;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #818181;
+    text-decoration: none;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    text-decoration: none;
+}
+
+.overEmploy {
+    width: 220px;
+}
+
+#header {
+    background-image: linear-gradient( rgba(49, 51, 53, 0.7), rgba(49, 51, 53, 0.7)), url("images/StockSnap_DZ7DC58DSV.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    color: white;
+}
+
+.filter-nav {
+    padding: 0;
+}
+
+.projects-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.projects-nav li {
+    background-color: #302e38;
+    padding: 20px 115px 20px 20px;
+    border-right: 1px solid #555555;
+    border-bottom: 1px solid #555555;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 90px;
+}
+
+.projects-nav li:last-of-type {
+    border-right: none;
+}
+
+.projects-nav li.active {
+    background-color: #ec3b3c;
+    color: #302e38;
+}
+
+.projects-nav li i {
+    position: absolute;
+    right: 20px;
+    font-size: 36px;
+    display: none;
+}
+
+.projects-nav li:hover {
+    cursor: pointer;
+}
+
+.projects-nav li.active i {
+    display: block;
+}
+
+.container h1 {
+    font-size: 36px;
+    text-align: center;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.card-img-top {
+    padding: 0;
+}
+
+.card-title {
+    background-color: #fbd754;
+    display: inline-block;
+    padding: 7px;
+}
+
+.cards-container .card {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.cards-container .card:hover {
+    position: relative;
+    bottom: 10px;
+}
+
+.card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-text {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: normal;
+}
+
+.card-date {
+    font-weight: bold;
+    font-size: 10px;
+    display: block;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card .btn {
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 20px;
+}
+
+.cards-container .card-holder {
+    margin-bottom: 30px;
+}
+
+.form {
+    margin-bottom: 225px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 1200px;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-content h1 {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-size: 42px;
+}
+
+.form-input {
+    min-width: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#form-btn {
+    background-color: #ff0028;
+    color: white;
+    font-family: Ubuntu, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    text-indent: 0;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.fa-angle-down {
+    float: right;
+    padding-right: 15px;
+}
+
+label, input {
+    display: block;
+    width: 100%;
+}
+
+input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid wheat;
+    border-radius: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-indent: 15px;
+    font-style: italic;
+}
+
+.load-more-container {
+    clear: both;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.load-more {
+    display: none;
+    width: 200px;
+    padding: 10px 6px;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+footer {
+    background-color: #34313a;
+    color: white;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+footer p {
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* custom dropdown styling */
+
+.options {
+    background: white;
+    position: absolute;
+    z-index: 1;
+    border: 1px solid wheat;
+    border-radius: 5px;
+    box-shadow: 3px 7px 10px #0000007a;
+    margin: 5px 0;
+    display: none;
+    width: 400px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.options.open {
+    display: block;
+}
+
+.option {
+    padding: 15px;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.option:hover {
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.option.selected {
+    background-color: tomato;
+    border-radius: 5px;
+}
+
+.selected-value {
+    background-color: white;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid wheat;
+    border-radius: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: justify;
+    text-indent: 15px;
+    color: black;
+    position: relative;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+}
+
+@media only screen and (min-width: 1050px) {
+    .hamb_icon_1, .hamb_icon_2 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1049px) {
+    #navbar ul, .employ {
+        display: none;
+    }
+    #navbar {
+        justify-content: space-between;
+    }
+    .project-btn {
+        width: 100%;
+    }
+    .hamb_icon_1 {
+        display: none;
+    }
+    .hamb_icon_2 {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .form-input {
+        min-width: 290px;
+        width: 290px;
+        font-size: 12px;
+    }
+    .options {
+        width: 290px;
+    }
+    .dropdown-content {
+        max-width: 290px;
+    }
+    #header {
+        min-height: 200px;
+    }
+    .form-content h1 {
+        margin-top: 50px;
+        margin-bottom: 30px;
+        font-size: 33px;
+    }
+    .hamb_icon_1 {
+        display: block;
+    }
+    .hamb_icon_2 {
+        display: none;
+    }
+    .container h1 {
+        text-align: left;
+        padding-left: 12px;
+    }
+}
+
+@media only screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}

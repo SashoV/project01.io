@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Brainster Labs | Form</title>
+    <link rel="shortcut icon" type="image/png" href="myfavicon.png"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e0b18861b4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <navbar id="navbar">
+        <a href="index.html"><img src="images/brainster_logo.png" alt="logo" class="logo"></a>
+        <ul>
+            <li><a href="https://www.brainster.io/marketpreneurs">Академија за маркетинг</a></li>
+            <li><a href="http://codepreneurs.co/">Академија за програмирање</a></li>
+            <li><a href="https://datascience.brainster.co/">Академија за data science</a></li>
+            <li><a href="https://www.brainster.io/design">Академија за дизајн</a></li>
+        </ul>
+        <a class="employ red-btn" href="form.html">Вработи наш студент</a>
+        <div class="hamb_icon_1" onclick="openNavBig()">
+            <div class="top_line"></div>
+            <div class="middle_line"></div>
+            <div class="bottom_line"></div>
+        </div>
+        <div class="hamb_icon_2" onclick="openNavSmall()">
+            <div class="top_line"></div>
+            <div class="middle_line"></div>
+            <div class="bottom_line"></div>
+        </div>
+    </navbar>
+
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="https://www.brainster.io/marketpreneurs">Академија за маркетинг</a>
+            <a href="http://codepreneurs.co/">Академија за програмирање</a>
+            <a href="https://datascience.brainster.co/">Академија за data science</a>
+            <a href="https://www.brainster.io/design">Академија за дизајн</a>
+            <a class="employ red-btn overEmploy" id="font-13" href="form.html">Вработи наш студент</a>
+        </div>
+    </div>
+
+    <div class="form-content">
+        <h1>Вработи студенти</h1>
+        <form method="GET" class="form">
+            <div class="form-input">
+                <label for="fullName">Име и презиме</label>
+                <input type="text" id="fullName" name="fullName" title="Внесете го вашето име и презиме"
+                    placeholder="Вашето име и презиме" maxlength="38" pattern="[A-Za-z]{1,38}" required>
+            </div>
+
+            <div class="form-input">
+                <label for="compName">Име на компанија</label>
+                <input type="text" id="compName" name="compName" title="Внесете го името на вашата компанија"
+                    placeholder="Име на вашата компанија" maxlength="38" required>
+            </div>
+
+            <div class="form-input">
+                <label for="mail">Контакт имејл</label>
+                <input type="email" id="mail" name="mail" title="Внесете ја вашата имејл адреса"
+                    placeholder="Контакт имејл на вашата компанија" required>
+            </div>
+
+            <div class="form-input">
+                <label for="phoneNum">Контакт телефон</label>
+                <input type="tel" id="phoneNum" name="phoneNum" title="Внесете телефонски број за контакт"
+                    placeholder="Контакт телефон на вашата компанија" pattern="^\d{13}$" required>
+            </div>
+
+            <div class="form-input">
+                <label for="type">Тип на студенти</label>
+                <div class="custom-select">
+                    <span class="selected-value">Изберете тип на студент<i class="fas fa-angle-down"></i></span>
+                    <div class="options">
+                        <div class="option">Студенти од маркетинг</div>
+                        <div class="option">Студенти од програмирање</div>
+                        <div class="option">Студенти од data science</div>
+                        <div class="option">Студенти од дизајн</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-input">
+                <input type="submit" id="form-btn" name="send_button" value="ИСПРАТИ">
+            </div>
+        </form>
+    </div>
+
+
+    <footer>
+        <p>Изработено со <img src="images/red-heart.png" alt="red heart" width="15px"> од студентите на
+            Brainster</p>
+    </footer>
+
+
+
+    <script>
+        /* Open when someone clicks on the span element */
+        function openNavBig() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function openNavSmall() {
+            document.getElementById("myNav").style.width = "50%";
+        }
+
+        /* Close when someone clicks on the "x" symbol inside the overlay */
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+
+
+
+        /* Select button in form */
+        let customSelect = document.querySelector('.custom-select');
+        let selectedValue = document.querySelector('.selected-value');
+        let allOptions = document.querySelectorAll('.options .option')
+
+        customSelect.addEventListener('click', function () {
+            customSelect.querySelector('.options').classList.toggle('open');
+        });
+
+        window.addEventListener('click', function (e) {
+            if (!customSelect.contains(e.target)) {
+                customSelect.querySelector('.options').classList.remove('open');
+            }
+        });
+
+        for (let i = 0; i < allOptions.length; i++) {
+            const option = allOptions[i];
+            option.addEventListener('click', function () {
+                if (!option.classList.contains('selected')) {
+                    let findSelected = option.parentNode.querySelector('.option.selected');
+                    if (findSelected) {
+                        findSelected.classList.remove('selected');
+                    }
+                    option.classList.add('selected');
+                    selectedValue.innerHTML = option.textContent;
+                }
+            })
+        }
+    </script>
+
+
+</body>
+
+<html>
